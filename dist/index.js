@@ -4805,7 +4805,8 @@ const axios = __nccwpck_require__(7038);
             'artifacts': artifacts,
             'pipelineName': `${githubContext.repository}/${githubContext.workflow}`,
             'stageName': `${githubContext.job}`,
-            'taskExecutionNumber': `${githubContext.run_number}`
+            'taskExecutionNumber': `${githubContext.run_number}`,
+            'workflowRunId': `${github.run_id}`
         };
         console.log("paylaod to register artifact: " + JSON.stringify(payload));
     } catch (e) {
