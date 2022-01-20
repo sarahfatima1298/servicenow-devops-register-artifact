@@ -35,7 +35,7 @@ const axios = require('axios');
             'pipelineName': `${githubContext.repository}/${githubContext.workflow}`,
             'stageName': `${githubContext.job}`,
             'taskExecutionNumber': `${githubContext.run_number}`,
-            'workflowRunId': `${github.run_id}`
+            'workflowRunId': `${githubContext.run_id}`
         };
         console.log("paylaod to register artifact: " + JSON.stringify(payload));
     } catch (e) {
