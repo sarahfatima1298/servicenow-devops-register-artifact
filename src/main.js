@@ -25,17 +25,17 @@ const axios = require('axios');
         core.setFailed(`Exception parsing github context ${e}`);
     }
 
-    const endpoint = `https://${username}:${pass}@${instanceName}.service-now.com/api/sn_devops/v1/devops/tool/orchestration?toolId=${toolId}&orchestrationToolId=${toolId}`;
+    const endpoint = `https://${username}:${pass}@${instanceName}.service-now.com/api/sn_devops/v1/devops/artifact/registration?orchestrationToolId=${toolId}`;
    
     let payload;
-   
+    
     try {
         payload = {
             'artifacts': artifacts,
             'pipelineName': `${githubContext.repository}/${githubContext.workflow}`,
             'stageName': `${githubContext.job}`,
             'taskExecutionNumber': `${githubContext.run_number}`,
-            'workflowRunId': `${githubContext.run_id}`
+            'branchName': `${githubContext.ref_name}`
         };
         console.log("paylaod to register artifact: " + JSON.stringify(payload));
     } catch (e) {
