@@ -1,5 +1,5 @@
 {
-  "name": "register-artifact-action",
+  "name": "servicenow-devops-register-artifact",
   "version": "1.0.0",
   "description": "Register Artifact Custom Action",
   "main": "dist/index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/velivalab/register-artifact-action.git"
+    "url": "git+https://github.com/velivalab/servicenow-devops-register-artifact.git"
   },
   "author": "bhavani",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/velivalab/register-artifact-action/issues"
+    "url": "https://github.com/velivalab/servicenow-devops-register-artifact/issues"
   },
-  "homepage": "https://github.com/velivalab/register-artifact-action#readme",
+  "homepage": "https://github.com/velivalab/servicenow-devops-register-artifact#readme",
   "dependencies": {
     "@actions/core": "^1.6.0",
     "axios": "^0.25.0",
