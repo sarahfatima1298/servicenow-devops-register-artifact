@@ -1,5 +1,5 @@
-name: 'ServiceNow DevOps Notification'
-description: 'Send Sonar Scan Info to ServiceNow Devops'
+name: 'ServiceNow DevOps Register Artifact'
+description: 'Send Artifat Details to ServiceNow Devops'
 inputs:
   devops-integration-user-name:
     description: 'Devops Integration User Name'
