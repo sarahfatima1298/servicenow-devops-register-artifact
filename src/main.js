@@ -25,7 +25,7 @@ const axios = require('axios');
         core.setFailed(`Exception parsing github context ${e}`);
     }
 
-    const endpoint = `https://${username}:${pass}@${instanceName}.service-now.com/api/sn_devops/v1/devops/artifact/registration?orchestrationToolId=${toolId}`;
+    const endpoint = `https://${username}:${pass}@${instanceName}/api/sn_devops/v1/devops/artifact/registration?orchestrationToolId=${toolId}`;
    
     let payload;
     
