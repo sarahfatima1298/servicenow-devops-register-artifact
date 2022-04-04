@@ -1,1 +1,1 @@
-# register-artifact-action
+# servicenow-devops-register-artifact

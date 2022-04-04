@@ -13,6 +13,9 @@ inputs:
   tool-id:
     description: 'Orchestration Tool Id'
     required: true
+  job-name:
+    description: 'Name of the Job'
+    required: true
   context-github:
     description: 'Github Context'
     required: true

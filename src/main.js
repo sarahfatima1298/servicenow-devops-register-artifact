@@ -7,6 +7,7 @@ const axios = require('axios');
     const toolId = core.getInput('tool-id', { required: true });
     const username = core.getInput('devops-integration-user-name', { required: true });
     const pass = core.getInput('devops-integration-user-pass', { required: true });
+    const jobName = core.getInput('job-name', { required: true });
 
     let artifacts = core.getInput('artifacts', { required: true });
     
@@ -33,7 +34,7 @@ const axios = require('axios');
         payload = {
             'artifacts': artifacts,
             'pipelineName': `${githubContext.repository}/${githubContext.workflow}`,
-            'stageName': `${githubContext.job}`,
+            'stageName': jobName,
             'taskExecutionNumber': `${githubContext.run_number}`,
             'branchName': `${githubContext.ref_name}`
         };
